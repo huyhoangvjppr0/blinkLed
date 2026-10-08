@@ -47,23 +47,21 @@ Dự án sử dụng cơ chế chia nhiều môi trường (`env`) độc lập 
 
 ---
 
-## 4. Chi tiết chức năng & Logic điều khiển (File `2leds.cpp`)
+## 4. Chi tiết chức năng & Logic điều khiển các file
 
-Sử dụng duy nhất một nút nhấn (tại chân **GPIO 9**) để tương tác với hệ thống 2 đèn LED:
+* **`blink.cpp` (Nháy cơ bản):** 
+  * Điều khiển 1 LED (GPIO 7) nhấp nháy liên tục theo chu kỳ để kiểm tra phần cứng.
 
-* **Trạng thái khởi động:** 
-  * LED 1 (chân 7) sáng, LED 2 (chân 8) tắt.
-  * Hệ thống chọn sẵn quyền điều khiển ở LED 1 (`led_select = 1`).
-* **Single Click (Bấm đơn):** 
-  * Đảo trạng thái (`flip()`) Bật/Tắt của LED đang được chọn.
-  * *Lưu ý:* Nếu đèn đang ở chế độ nhấp nháy, bấm đơn sẽ dừng nháy và tắt đèn.
-* **Double Click (Bấm đúp):** 
-  * Chuyển đổi quyền điều khiển qua lại giữa LED 1 và LED 2 (`1 ⇄ 2`). 
-  * Khi chuyển, LED vừa được chọn sẽ bật sáng, LED còn lại tự động tắt.
-* **Long Press / Hold (Giữ nút):** 
-  * Kích hoạt chế độ nhấp nháy liên tục với chu kỳ **200ms** (`blink(200)`) cho LED đang được chọn.
+* **`doubleClick.cpp` (1 LED - Bấm đơn/đúp):** 
+  * Điều khiển 1 LED (GPIO 7) bằng nút bấm (GPIO 0).
+  * **Bấm đơn:** Đảo trạng thái Bật/Tắt (Blink/Off).
+  * **Bấm đúp:** Kích hoạt chế độ nhấp nháy 200ms.
 
----
+* **`2leds.cpp` (2 LED - Chương trình chính):** 
+  * Quản lý 2 LED (GPIO 7, 8) qua 1 nút nhấn (GPIO 9). Khởi động LED 1 sáng, LED 2 tắt.
+  * **Single Click:** Đảo trạng thái Bật/Tắt của LED đang chọn (đang nháy thì bấm sẽ dừng và tắt).
+  * **Double Click:** Chuyển đổi quyền điều khiển qua lại giữa LED 1 và LED 2 (LED chọn sáng, LED kia tắt).
+  * **Long Press (Giữ nút):** Kích hoạt nhấp nháy liên tục 200ms cho LED đang chọn.
 
 ---
 
