@@ -47,7 +47,6 @@ Dự án phát triển trên nền tảng **PlatformIO (VS Code)** sử dụng v
 ---
 
 ## 2. Cấu trúc dự án
-
 ```text
 blinkLed/
 ├── .pio/
@@ -55,15 +54,15 @@ blinkLed/
 ├── include/
 ├── lib/
 │   └── LED/
-│       └── LED.h           # Thư viện tùy chỉnh điều khiển LED
+│       └── LED.h         # Thư viện tùy chỉnh điều khiển LED
 ├── src/
-│   ├── blink.cpp           # Chương trình nháy LED cơ bản
-│   ├── doubleClick.cpp     # Chương trình điều khiển 1 LED với bấm đơn/đúp
-│   └── 2leds.cpp           # Chương trình chính điều khiển 2 LED bằng 1 nút bấm
+│   ├── blink.cpp         # Chương trình nháy LED cơ bản
+│   ├── doubleClick.cpp   # Chương trình điều khiển 1 LED với bấm đơn/đúp
+│   └── 2leds.cpp         # Chương trình chính điều khiển 2 LED bằng 1 nút bấm
 ├── test/
 ├── .gitignore
-├── platformio.ini          # File cấu hình môi trường và cờ biên dịch (Build flags)
-└── README.md               # Tài liệu mô tả dự án
+├── platformio.ini        # File cấu hình môi trường và cờ biên dịch (Build flags)
+└── README.md             # Tài liệu mô tả dự án
 
 ---
 
