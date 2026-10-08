@@ -31,6 +31,7 @@ blinkLed/
 ├── .gitignore
 ├── platformio.ini        # File cấu hình môi trường và cờ biên dịch (Build flags)
 └── README.md             # Tài liệu mô tả dự án
+```
 
 ---
 
